@@ -10,13 +10,13 @@ import {
   Platform,
   Animated,
   Easing,
-  Dimensions,
 } from 'react-native';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Ionicons } from "@expo/vector-icons";
 
-// Initialize Gemini AI
-const genAI = new GoogleGenerativeAI('AIzaSyCk_nEm0_J4gE20cw4ronBPPF-TtOUqS8g');
+// Initialize Gemini AI with the correct API version
+// Note: Using environment variable is recommended for API keys
+const genAI = new GoogleGenerativeAI('AIzaSyD-J7paW45KG_WY5DGoHITBIOdKZRwX480');
 
 // Agriculture-themed colors
 const COLORS = {
@@ -181,10 +181,12 @@ const ChatScreen = () => {
     }).start();
 
     try {
-      const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+      // Updated API call to use the correct model name
+      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+      
+      // Use the proper method to generate content
       const result = await model.generateContent(inputText.trim());
-      const response = await result.response;
-      const text = response.text();
+      const text = result.response.text();
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),

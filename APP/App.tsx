@@ -32,7 +32,7 @@ const Stack = createNativeStackNavigator();
 
 // Inside your TabNavigator function, modify the screenOptions to include the chat icon
 function TabNavigator() {
-  const url = "http://192.168.57.182:5000";
+  const url = "http://192.168.109.229:5000";
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({

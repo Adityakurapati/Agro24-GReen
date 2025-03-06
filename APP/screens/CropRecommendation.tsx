@@ -42,6 +42,9 @@ const CropRecommendation = ({ route }) => {
     ph: "6.8",
     soil_moisture: "40",
     water_level: "78.2",
+    rainfall: "200",
+    humidity: "22.4",
+    temperature: "25.3"
   });
 
   // Define valid range for each input
@@ -52,6 +55,9 @@ const CropRecommendation = ({ route }) => {
     soil_moisture: { min: 17, max: 34 },
     ph: { min: 4.7, max: 7.5 },
     water_level: { min: 40, max: 240 },
+    rainfall: { min: 50, max: 300 },
+    humidity: { min: 10, max: 100 },
+    temperature: { min: 0, max: 45 }
   };
 
   const [sensorData, setSensorData] = useState({
@@ -68,6 +74,7 @@ const CropRecommendation = ({ route }) => {
       k: 20.1,
       ph: 6.8,
       soil_moisture: 40,
+      rainfall: 200,
     },
   });
 
@@ -196,7 +203,7 @@ const CropRecommendation = ({ route }) => {
     ).start();
 
     try {
-      const apiUrl = `${url}/crop_recommendation?n=${inputValues.n}&p=${inputValues.p}&k=${inputValues.k}&temperature=${sensorData["-O4au0_OKuJStajyzN5a"].temperature}&humidity=${sensorData["-O4au0_OKuJStajyzN5a"].humidity}&ph=${sensorData["-O4au0_OKuJStajyzN5a"].ph}&rainfall=100`;
+      const apiUrl = `${url}/crop_recommendation?n=${inputValues.n}&p=${inputValues.p}&k=${inputValues.k}&temperature=${inputValues.temperature}&humidity=${inputValues.humidity}&ph=${inputValues.ph}&rainfall=${inputValues.rainfall}`;
       
       const response = await fetch(apiUrl);
       
@@ -268,11 +275,10 @@ const CropRecommendation = ({ route }) => {
             },
           ]}
         >
-          <Text style={[styles.sectionTitle, { color: theme.text }]}>Temperature</Text>
-          <View style={styles.temperatureContainer}>
-            <Text style={[styles.temperatureText, { color: theme.primary }]}>
-              {sensorData["-O4au0_OKuJStajyzN5a"].temperature} °C
-            </Text>
+          <Text style={[styles.sectionTitle, { color: theme.text }]}>Environmental Data</Text>
+          <View style={styles.blockContainer}>
+            <EditableDataBlock title="Temperature" valueKey="temperature" unit="°C" />
+            <EditableDataBlock title="Humidity" valueKey="humidity" unit="%" />
           </View>
         </Animated.View>
 
@@ -324,6 +330,7 @@ const CropRecommendation = ({ route }) => {
             <EditableDataBlock title="PH" valueKey="ph" />
             <EditableDataBlock title="Soil Moisture" valueKey="soil_moisture" unit="%" />
             <EditableDataBlock title="Water Level" valueKey="water_level" unit="%" />
+            <EditableDataBlock title="Rainfall" valueKey="rainfall" unit="mm" />
           </View>
 
           <TouchableOpacity
