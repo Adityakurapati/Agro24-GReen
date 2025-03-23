@@ -1,0 +1,56 @@
+{
+        "crops": [
+                {
+                        "id": 1,
+                        "name": "Rice",
+                        "category": "Cereals",
+                        "difficulty": "Moderate",
+                        "description": "Rice is the seed of the grass species Oryza sativa or less commonly Oryza glaberrima. As a cereal grain, it is the most widely consumed staple food for a large part of the world's human population.",
+                        "growingTime": "90-120 days",
+                        "waterNeeds": "High",
+                        "soilType": "Clay, Loam",
+                        "icon": "🌱",
+                        "growingInstructions": "1. Prepare paddies by flooding fields\n2. Sow pre-germinated seeds directly or transplant seedlings\n3. Maintain water level at 5-10cm during growth\n4. Drain field 2-3 weeks before harvest\n5. Harvest when grains are mature and golden yellow",
+                        "bestPractices": "- Ensure consistent water supply throughout growing season\n- Apply balanced fertilizer with emphasis on nitrogen\n- Monitor for pests such as stem borers and rice bugs\n- Practice crop rotation to prevent disease buildup\n- Consider proper water management to reduce methane emissions"
+                },
+                {
+                        "id": 2,
+                        "name": "Wheat",
+                        "category": "Cereals",
+                        "difficulty": "Easy",
+                        "description": "Wheat is a grass widely cultivated for its seed, a cereal grain that is a worldwide staple food. The many species of wheat together make up the genus Triticum.",
+                        "growingTime": "100-130 days",
+                        "waterNeeds": "Medium",
+                        "soilType": "Loam, Silt",
+                        "icon": "🌱",
+                        "growingInstructions": "1. Prepare soil by plowing and harrowing\n2. Sow seeds at 2-3cm depth in rows\n3. Water immediately after sowing and at critical growth stages\n4. Apply fertilizer as recommended for your soil type\n5. Monitor for weeds and pests regularly\n6. Harvest when grain is hard and plants are golden",
+                        "bestPractices": "- Plant at the right time based on your climate zone\n- Ensure proper drainage to prevent waterlogging\n- Use disease-resistant varieties when possible\n- Rotate with legumes to improve soil fertility\n- Apply fungicides preventatively in humid conditions"
+                },
+                {
+                        "id": 3,
+                        "name": "Apple",
+                        "category": "Fruits",
+                        "difficulty": "Moderate",
+                        "description": "Apples are the fruit of the apple tree (Malus domestica), a deciduous tree that is a member of the rose family. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
+                        "growingTime": "3-5 years for production",
+                        "waterNeeds": "Medium",
+                        "soilType": "Loam, Sandy Loam",
+                        "icon": "🍎",
+                        "growingInstructions": "1. Plant young trees in full sun during dormant season\n2. Dig hole twice as wide as the root ball\n3. Water deeply once a week during growing season\n4. Prune annually during winter dormancy\n5. Thin fruit to improve size and prevent branch breakage\n6. Harvest when fruit is firm and well-colored",
+                        "bestPractices": "- Choose varieties suitable for your climate zone\n- Provide proper spacing (15-20 feet between trees)\n- Apply mulch to conserve moisture and suppress weeds\n- Implement integrated pest management for apple maggot and codling moth\n- Perform soil tests and amend as needed"
+                },
+                {
+                        "id": 4,
+                        "name": "Tomato",
+                        "category": "Vegetables",
+                        "difficulty": "Easy",
+                        "description": "The tomato is the edible berry of the plant Solanum lycopersicum, commonly known as the tomato plant. It is widely grown and cultivated for its edible fruits.",
+                        "growingTime": "60-85 days",
+                        "waterNeeds": "Medium",
+                        "soilType": "Loam",
+                        "icon": "🍅",
+                        "growingInstructions": "1. Start seeds indoors 6-8 weeks before last frost\n2. Transplant after danger of frost has passed\n3. Plant deeply, burying stem up to first leaves\n4. Provide support with stakes or cages\n5. Water regularly at the base of plants\n6. Harvest when fruits are firm and fully colored",
+                        "bestPractices": "- Mulch to prevent soil-borne diseases\n- Prune suckers for indeterminate varieties\n- Avoid overhead watering to prevent fungal diseases\n- Rotate crops to prevent disease buildup\n- Provide consistent moisture to prevent blossom end rot"
+                }
+        ]
+}
